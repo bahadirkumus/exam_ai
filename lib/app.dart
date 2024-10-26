@@ -1,4 +1,5 @@
-import 'package:exam_ai/screens/main/home/home_screen.dart';
+import 'package:exam_ai/screens/authentication/login/login.dart';
+import 'package:exam_ai/screens/main/home/home.dart';
 import 'package:exam_ai/utils/constants/text_string.dart';
 import 'package:exam_ai/utils/theme/theme.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class ExamAIApp extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      home: LoginScreen(),
     );
   }
 }

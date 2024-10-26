@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "221843739029",
+    "project_id": "exam-ai-dca06",
+    "storage_bucket": "exam-ai-dca06.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221843739029:android:7b00ebd1dc04ee2f2ba69c",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCC2jAMxJHFrnrg1Ben_XLnXOti_GSirm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221843739029:android:1565341f4e84fe792ba69c",
+        "android_client_info": {
+          "package_name": "com.example.exAI"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCC2jAMxJHFrnrg1Ben_XLnXOti_GSirm4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
