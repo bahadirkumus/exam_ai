@@ -10,6 +10,7 @@ Team Members: Bahadır KÜMÜŞ & Ömer Bahadır KILIÇ
 
 Uygulama Flutter ile MVC ve clean architecture yapısına uygun şekilde geliştirilmiştir. Hem mobil hem web desteği vardır.
 
+***Tanıtım videosu***: https://youtu.be/Bsnown5HOK0
 
 ## Uygulama İçinden Ekran Görüntüleri
 <img width="412" alt="Screenshot 2024-11-03 at 10 40 39 PM" src="https://github.com/user-attachments/assets/4f3e6787-3164-4a68-bf4f-71f63e29a1aa">
