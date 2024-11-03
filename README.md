@@ -3,9 +3,10 @@
 
 Uygulamamız, üniversite öğrencilerine soru bankalarına kolay erişim ve yapay zeka destekli analizlerle öğrenme sürecini derinlemesine kişiselleştirme imkanı sunar; yanlış cevapladıkları sorularda aldıkları detaylı açıklamalarla öğrenimlerini verimli ve özelleştirilmiş bir platformda sürdürmelerini sağlar.
 
-## Geliştiricler
+## Geliştiriciler
 
 Team Name: flycse
+
 Team Members: Bahadır KÜMÜŞ & Ömer Bahadır KILIÇ
 
 Uygulama Flutter ile MVC ve clean architecture yapısına uygun şekilde geliştirilmiştir. Hem mobil hem web desteği vardır.
