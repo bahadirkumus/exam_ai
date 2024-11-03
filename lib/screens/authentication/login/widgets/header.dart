@@ -8,20 +8,19 @@ class LoginHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Image(
-          height: 150,
-          image: AssetImage(
-             AppImages.appLogo),
-        ),
-        Text(AppTexts.loginTitle,
-            style: Theme.of(context).textTheme.headlineLarge),
-        const SizedBox(height: AppSizes.spaceBtwLabels),
-        Text(AppTexts.loginSubTitle,
-            style: Theme.of(context).textTheme.bodyMedium),
-      ],
+    return Center(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Image(
+            height: 150,
+            image: AssetImage(
+               AppImages.appLogo),
+          ),
+          Text(AppTexts.loginSubTitle,
+              style: Theme.of(context).textTheme.bodyMedium),
+        ],
+      ),
     );
   }
 }

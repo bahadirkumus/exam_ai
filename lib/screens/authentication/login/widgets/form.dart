@@ -15,73 +15,77 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: controller.loginFormKey,
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: AppSizes.spaceBtwSections),
-        child: Column(
-          children: [
-            TextFormField(
-              controller: controller.email,
-              validator: (value) => AppValidator.validateEmail(value),
-              decoration: const InputDecoration(
-                prefixIcon: Icon(
-                  Iconsax.personalcard,
+    return Center(
+      child: ConstrainedBox(
+        constraints: BoxConstraints(maxWidth: 550),
+        child: Form(
+          key: controller.loginFormKey,
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: AppSizes.spaceBtwSections),
+            child: Column(
+              children: [
+                TextFormField(
+                  controller: controller.email,
+                  validator: (value) => AppValidator.validateEmail(value),
+                  decoration: const InputDecoration(
+                    prefixIcon: Icon(
+                      Iconsax.personalcard,
+                    ),
+                    labelText: AppTexts.email,
+                  ),
                 ),
-                labelText: AppTexts.email,
-              ),
-            ),
-            const SizedBox(
-              height: AppSizes.spaceBtwInputFields,
-            ),
-            Obx(
-              () => TextFormField(
-                controller: controller.password,
-                validator: (value) =>
-                    AppValidator.validateEmptyText("Şifre", value),
-                expands: false,
-                obscureText: controller.hidePassword.value,
-                decoration: InputDecoration(
-                  prefixIcon: const Icon(Iconsax.password_check),
-                  labelText: AppTexts.password,
-                  suffixIcon: IconButton(
-                    onPressed: () => controller.hidePassword.value =
+                const SizedBox(
+                  height: AppSizes.spaceBtwInputFields,
+                ),
+                Obx(
+                      () => TextFormField(
+                    controller: controller.password,
+                    validator: (value) =>
+                        AppValidator.validateEmptyText("Password", value),
+                    expands: false,
+                    obscureText: controller.hidePassword.value,
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(Iconsax.password_check),
+                      labelText: AppTexts.password,
+                      suffixIcon: IconButton(
+                        onPressed: () => controller.hidePassword.value =
                         !controller.hidePassword.value,
-                    icon: Icon(controller.hidePassword.value
-                        ? Iconsax.eye_slash
-                        : Iconsax.eye),
+                        icon: Icon(controller.hidePassword.value
+                            ? Iconsax.eye_slash
+                            : Iconsax.eye),
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ),
-            const SizedBox(height: AppSizes.spaceBtwInputFields),
-            AppElevatedButton(controller: controller),
-            const SizedBox(
-              height: AppSizes.spaceBtwItems,
-            ),
-            SizedBox(
-              width: double.infinity,
-              child: OutlinedButton(
-                onPressed: () => Get.to(() => SignUpScreen()),
-                style: OutlinedButton.styleFrom(
-                  padding:
-                      EdgeInsets.symmetric(vertical: 12.0),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(AppSizes.borderRadius),
+                const SizedBox(height: AppSizes.spaceBtwInputFields),
+                AppElevatedButton(controller: controller),
+                const SizedBox(
+                  height: AppSizes.spaceBtwItems,
+                ),
+                SizedBox(
+                  width: double.infinity,
+                  child: OutlinedButton(
+                    onPressed: () => Get.to(() => SignUpScreen()),
+                    style: OutlinedButton.styleFrom(
+                      padding: EdgeInsets.symmetric(vertical: 12.0),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(AppSizes.borderRadius),
+                      ),
+                    ),
+                    child: Text(
+                      AppTexts.createAccount,
+                      style: Theme.of(context).textTheme.titleSmall?.apply(
+                        color: AppColors.primary,
+                      ),
+                    ),
                   ),
                 ),
-                child: Text(
-                    AppTexts.createAccount,
-                  style: Theme.of(context).textTheme.titleSmall?.apply(
-                    color: AppColors.primary,
-                  ),
+                const SizedBox(
+                  height: AppSizes.spaceBtwSections,
                 ),
-              ),
+              ],
             ),
-            const SizedBox(
-              height: AppSizes.spaceBtwSections,
-            ),
-          ],
+          ),
         ),
       ),
     );
@@ -112,8 +116,8 @@ class AppElevatedButton extends StatelessWidget {
         child: Text(
           AppTexts.signIn,
           style: Theme.of(context).textTheme.titleSmall?.apply(
-                color: AppColors.textLight,
-              ),
+            color: AppColors.textLight,
+          ),
         ),
       ),
     );
