@@ -1,4 +1,5 @@
 import 'package:exam_ai/controllers/authentication/login_controller.dart';
+import 'package:exam_ai/screens/authentication/signup/sign_up.dart';
 import 'package:exam_ai/utils/constants/colors.dart';
 import 'package:exam_ai/utils/constants/sizes.dart';
 import 'package:exam_ai/utils/constants/text_string.dart';
@@ -37,7 +38,7 @@ class LoginForm extends StatelessWidget {
               () => TextFormField(
                 controller: controller.password,
                 validator: (value) =>
-                    AppValidator.validateEmptyText("Password", value),
+                    AppValidator.validateEmptyText("Şifre", value),
                 expands: false,
                 obscureText: controller.hidePassword.value,
                 decoration: InputDecoration(
@@ -61,7 +62,7 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                onPressed: () => Get.to(() {}),
+                onPressed: () => Get.to(() => SignUpScreen()),
                 style: OutlinedButton.styleFrom(
                   padding:
                       EdgeInsets.symmetric(vertical: 12.0),

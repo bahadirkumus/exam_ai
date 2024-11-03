@@ -27,7 +27,7 @@ class LoginController extends GetxController {
 
   Future<void> loginWithEmailAndPassword() async {
     try {
-      // start loading
+      // Start loading
       Loader.startLoading(
           "Giriş Yapılıyor...", AppImages.loading);
 

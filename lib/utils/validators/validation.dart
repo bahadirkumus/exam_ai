@@ -15,7 +15,7 @@ class AppValidator {
     final emailRegExp = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
 
     if (!emailRegExp.hasMatch(value)) {
-      return 'Geçersiz mail adresi!';
+      return 'Geçersiz mail adresi';
     }
 
     return null;
@@ -23,7 +23,7 @@ class AppValidator {
 
   static String? validatePassword(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Şifre gerekli!';
+      return 'Şifre gerekli';
     }
 
     // Check for minimum password length
@@ -51,7 +51,7 @@ class AppValidator {
 
   static String? validatePhoneNumber(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Telefon numarası gerekli!';
+      return 'Telefon numarası gerekli';
     }
 
     // Remove any non-digit characters

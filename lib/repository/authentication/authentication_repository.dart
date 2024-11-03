@@ -1,3 +1,4 @@
+import 'package:exam_ai/navigation.dart';
 import 'package:exam_ai/screens/authentication/login/login.dart';
 import 'package:exam_ai/screens/main/home/home.dart';
 import 'package:exam_ai/utils/exceptions/firebase_auth_exception.dart';
@@ -18,7 +19,7 @@ class AuthenticationRepository extends GetxController {
     final user = _auth.currentUser;
 
     if (user != null) {
-      Get.offAll(() => HomeScreen());
+      Get.offAll(() => MainScreen());
     }
   }
 
@@ -36,6 +37,23 @@ class AuthenticationRepository extends GetxController {
       throw AppPlatformException(e.code).message;
     } catch (e) {
       throw "Bir hata ile karşılaşıldı! Err: 10001";
+    }
+  }
+
+  // SignUp
+  Future<UserCredential> registerWithEmailAndPassword(String email, String password) async {
+    try {
+      return await _auth.createUserWithEmailAndPassword(email: email, password: password);
+    } on FirebaseAuthException catch (e) {
+      throw AppFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw AppFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const AppFormatException();
+    } on PlatformException catch (e) {
+      throw AppPlatformException(e.code).message;
+    } catch (e) {
+      throw "Bir şeyler ters gitti, lütfen tekrar dene!";
     }
   }
 }
