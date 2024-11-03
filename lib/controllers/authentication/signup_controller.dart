@@ -46,8 +46,8 @@ class SignupController extends GetxController {
       if (!privacyPolicy.value) {
         Loader.stopLoading();
         AppPopups.warningSnackBar(
-          title: "Gizlilik Sözleşmesini kabul ediniz.",
-          message: "Üyelik işlemlerininizi tamamlayabilmemiz için gizlilik politikasını kabul etmeniz gerekmektedir.",
+          title: "Accept the Privacy Agreement.",
+          message: "In order for us to complete your membership process, you must accept the privacy policy.",
         );
         return;
       }

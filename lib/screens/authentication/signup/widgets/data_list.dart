@@ -1,2 +1,2 @@
-final List<String> grades = ['1. Sınıf', '2. Sınıf', '3. Sınıf', '4. Sınıf', '5. Sınıf', '6. Sınıf'];
-final List<String> departments = ['Tıp Fakültesi'];
+final List<String> grades = ['1. Grade', '2. Grade', '3. Grade', '4. Grade', '5. Grade', '6. Grade'];
+final List<String> departments = ['Medicine'];

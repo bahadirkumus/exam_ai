@@ -70,8 +70,8 @@ class CourseCard extends StatelessWidget {
               SizedBox(height: 16),
               Image.asset(
                 course.image,
-                width: 120,
-                height: 120,
+                width: 70,
+                height: 70,
               ),
             ],
           ),

@@ -17,7 +17,6 @@ class TestScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.purple[200],
       appBar: AppBar(
-        // Başlık için testModel null kontrolü
         title: Obx(() {
           return Text(
             controller.testModel.value?.title ?? "Yükleniyor...",
@@ -41,7 +40,6 @@ class TestScreen extends StatelessWidget {
       ),
       body: GetBuilder<TestController>(
         builder: (controller) {
-          // Eğer testModel null ise yükleniyor göstergesi
           if (controller.testModel.value == null) {
             return Center(child: CircularProgressIndicator());
           }
@@ -70,33 +68,51 @@ class TestScreen extends StatelessWidget {
                         style: TextStyle(fontSize: 20),
                         textAlign: TextAlign.center,
                       ),
-                      SizedBox(height: 10),
-                      Text(
-                        "Yukarıdaki sorunun cevapları aşağıdakilerden hangisidir?",
-                        style: TextStyle(fontSize: 16),
-                        textAlign: TextAlign.center,
-                      ),
                     ],
                   ),
                 ),
                 SizedBox(height: 20),
                 ...List.generate(question.options.length, (index) {
+                  Color buttonColor = Colors.white;
+                  if (controller.userAnswers.containsKey(controller.currentIndex)) {
+                    if (controller.userAnswers[controller.currentIndex] == index) {
+                      buttonColor = controller.isAnswerCorrect(controller.currentIndex)
+                          ? Colors.green
+                          : Colors.red;
+                    }
+                  }
+
                   return Padding(
                     padding: const EdgeInsets.symmetric(vertical: 5.0),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.black, backgroundColor: controller.userAnswers[controller.currentIndex] == index
-                            ? Colors.blue
-                            : Colors.white,
+                        foregroundColor: Colors.black,
+                        backgroundColor: buttonColor,
                       ),
                       onPressed: () {
-                        controller.selectAnswer(index);
+                        if (!controller.userAnswers.containsKey(controller.currentIndex)) {
+                          controller.selectAnswer(index);
+                        }
                       },
-                      child: Text("A) ${question.options[index]}"),
+                      child: Text("${question.options[index]}"),
                     ),
                   );
                 }),
                 Spacer(),
+                if (controller.apiAnswer != null)
+                  Flexible(
+                    child: Container(
+                      padding: EdgeInsets.all(12),
+                      color: Colors.yellow[100],
+                      child: SingleChildScrollView(
+                        child: Text(
+                          "AI Cevabı: ${controller.apiAnswer}",
+                          style: TextStyle(fontSize: 16, color: Colors.black87),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [

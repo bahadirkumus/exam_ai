@@ -70,20 +70,6 @@ class SignUpForm extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: AppSizes.spaceBtwLabels,
-          ),
-          RichText(
-            text: TextSpan(
-              children: [
-                TextSpan(
-                  text:
-                      'Okulunuzun email adresi ile kayıt olmanız gerekmektedir.',
-                  style: Theme.of(context).textTheme.bodySmall,
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(
             height: AppSizes.spaceBtwInputFields,
           ),
           TextFormField(
@@ -102,7 +88,7 @@ class SignUpForm extends StatelessWidget {
           ),
           Obx(() => DropdownButton<String>(
             value: controller.department.value.isEmpty ? null : controller.department.value,
-            hint: Text('Bölüm Seçin', style: Theme.of(context).textTheme.bodyLarge,),
+            hint: Text('Select your department', style: Theme.of(context).textTheme.bodyLarge,),
             isExpanded: true,
             items: departments.map((String department) {
               return DropdownMenuItem<String>(
@@ -122,7 +108,7 @@ class SignUpForm extends StatelessWidget {
           ),
           Obx(() => DropdownButton<String>(
             value: controller.grade.value.isEmpty ? null : controller.grade.value,
-            hint: Text('Sınıf Seçin', style: Theme.of(context).textTheme.bodyLarge,),
+            hint: Text('Select your class', style: Theme.of(context).textTheme.bodyLarge,),
             isExpanded: true,
             items: grades.map((String className) {
               return DropdownMenuItem<String>(

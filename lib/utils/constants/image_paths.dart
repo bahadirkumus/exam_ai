@@ -10,4 +10,5 @@ class AppImages {
   static const String biophysicsImage = "assets/images/biophysics.png";
   static const String pathologyImage = "assets/images/pathology.png";
   static const String physiologyImage = "assets/images/physiology.png";
+  static const String lungsImage = "assets/images/lungs.png";
 }

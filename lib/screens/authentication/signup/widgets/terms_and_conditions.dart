@@ -34,6 +34,10 @@ class TermsAndConditionCheckbox extends StatelessWidget {
             TextSpan(
               children: [
                 TextSpan(
+                  text: '${AppTexts.iAgreeTo} ',
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+                TextSpan(
                   text: '${AppTexts.privacyPolicy} ',
                   style: Theme.of(context).textTheme.bodyMedium!.apply(
                     color: dark ? AppColors.white : AppColors.primary,
@@ -52,10 +56,6 @@ class TermsAndConditionCheckbox extends StatelessWidget {
                     decoration: TextDecoration.underline,
                     decorationColor: dark ? AppColors.white : AppColors.primary,
                   ),
-                ),
-                TextSpan(
-                  text: '${AppTexts.iAgreeTo} ',
-                  style: Theme.of(context).textTheme.bodySmall,
                 ),
               ],
             ),
