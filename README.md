@@ -19,8 +19,8 @@ Uygulama Flutter ile MVC ve clean architecture yapısına uygun şekilde gelişt
 <img width="410" alt="Screenshot 2024-11-03 at 10 37 37 PM" src="https://github.com/user-attachments/assets/88e60ef1-73ee-45d3-b7cb-aa9d08c1c642">
 
 
-<img width="418" alt="Screenshot 2024-11-03 at 10 39 22 PM" src="https://github.com/user-attachments/assets/9a375ba9-4576-4fa7-84ed-6b4124b19f07">
-<img width="414" alt="Screenshot 2024-11-03 at 10 39 45 PM" src="https://github.com/user-attachments/assets/19082c3f-ab30-4595-bd01-2e37fae8cbb1">
+<img width="412" alt="Screenshot 2024-11-03 at 10 39 22 PM" src="https://github.com/user-attachments/assets/9a375ba9-4576-4fa7-84ed-6b4124b19f07">
+<img width="412" alt="Screenshot 2024-11-03 at 10 39 45 PM" src="https://github.com/user-attachments/assets/19082c3f-ab30-4595-bd01-2e37fae8cbb1">
 
 
 ### Ürünün amacı ve gelecekte geliştirilecek tarafları:
