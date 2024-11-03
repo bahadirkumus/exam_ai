@@ -9,7 +9,9 @@ Team Name: flycse
 
 Team Members: Bahadır KÜMÜŞ & Ömer Bahadır KILIÇ
 
-Uygulama Flutter ile MVC ve clean architecture yapısına uygun şekilde geliştirilmiştir. Hem mobil hem web desteği vardır.
+Uygulama **Flutter** ile *MVC* ve *clean architecture* yapısına uygun şekilde geliştirilmiştir. Hem **mobil** hem **web** desteği vardır.
+
+Backend için **Firebase**, AI entegrasyonu için **Gemini** kullanılmıştır.
 
 ***Tanıtım videosu***: https://youtu.be/Bsnown5HOK0
 
